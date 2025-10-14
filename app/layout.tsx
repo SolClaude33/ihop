@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "IPHOPE",
+  title: "IHOP",
   description: "来自未来的希望之兔。 放轻松，Alpha 总会来的。",
   icons: {
     icon: "/favicon.png",

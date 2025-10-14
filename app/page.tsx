@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       <a
-        href="https://x.com/Ihope_bnb"
+        href="https://x.com/Ihop_bnb"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
