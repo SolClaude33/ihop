@@ -76,14 +76,14 @@ export default function HomePage() {
           <div className="flex flex-col items-start gap-4">
             <img src="/images/supply.png" alt="供应" className="w-[400px] max-w-[80vw] drop-shadow-2xl" />
             <div className="rounded-2xl bg-yellow-400 px-8 py-4 shadow-xl border-4 border-white">
-              <p className="font-bold text-gray-900 text-3xl md:text-4xl">1.000.000.000.000</p>
+              <p className="font-bold text-gray-900 text-3xl md:text-4xl">1.000.000.000</p>
             </div>
           </div>
         </div>
       </section>
 
       <a
-        href="https://x.com/Ihop_bnb"
+        href="https://x.com/i/communities/1995380852709065181"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
