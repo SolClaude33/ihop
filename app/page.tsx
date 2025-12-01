@@ -1,10 +1,13 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function HomePage() {
   const video1Ref = useRef<HTMLVideoElement>(null)
   const video2Ref = useRef<HTMLVideoElement>(null)
+  const [copied, setCopied] = useState(false)
+  
+  const contractAddress = "0x3134ef52bd9af8ec82e48e73d902e16249534444"
 
   useEffect(() => {
     // Ensure videos play on mount
@@ -15,6 +18,16 @@ export default function HomePage() {
       video2Ref.current.play().catch((err) => console.log("[v0] Video 2 autoplay prevented:", err))
     }
   }, [])
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error("Failed to copy:", err)
+    }
+  }
 
   return (
     <main className="relative">
@@ -36,7 +49,19 @@ export default function HomePage() {
             alt="由 BNB 链驱动"
             className="mb-4 w-[400px] max-w-[70vw] drop-shadow-2xl"
           />
-          <p className="mt-4 font-semibold text-white text-xl md:text-2xl drop-shadow-lg">CA SOON</p>
+          <div className="mt-4 flex flex-col items-end gap-2">
+            <button
+              onClick={copyToClipboard}
+              className="group relative font-semibold text-white text-xl md:text-2xl drop-shadow-lg hover:text-yellow-400 transition-colors cursor-pointer text-right"
+            >
+              CA: {contractAddress}
+              {copied && (
+                <span className="absolute -top-8 right-0 bg-green-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap">
+                  ¡Copiado!
+                </span>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Scrolling Text Banner */}
