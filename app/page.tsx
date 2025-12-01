@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       <a
-        href="https://x.com/i/communities/1995385977930387542"
+        href="https://x.com/MASA_Animelove"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
